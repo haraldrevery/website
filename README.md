@@ -6,6 +6,9 @@ Harald Revery official website, made with Tailwind CSS, Alpine.js and GLightbox.
 * Alpine.js [Website](https://alpinejs.dev/), [Github](https://github.com/alpinejs/alpine)
 * GLightbox [Website](https://biati-digital.github.io/glightbox/), [Github](https://github.com/biati-digital/glightbox)
 
+Alpine.js was used for "navigation bar reveal when scroll" on older browsers and to run a custom made audio player. GLightbox for pop out image sliders when the user clicks an image (the CSS trick was not good enough). 
+
+
 Main LLM models used to generate and troubleshoot code:
 * Anthropic: Claude AI (Sonnet 4.5)
 * Google: Gemini 

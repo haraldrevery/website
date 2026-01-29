@@ -13,3 +13,11 @@ Main LLM models used to generate and troubleshoot code:
 * Anthropic: Claude AI (Sonnet 4.5)
 * Google: Gemini 
 * xAI: Grok
+
+Personal setup for this project:
+* Windows 10 with Firefox, Edge Zen with JavaScript blocker
+* VS Code with the Live Server extension by Ritwick Dey
+* Tailwind CSS v4.1.18  (tailwindcss-windows-x64.exe)
+
+Then I just run:
+.\tw.exe -i input.css -o main.css --watch --content "./*.html"

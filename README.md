@@ -1,5 +1,7 @@
 # Harald Revery official website
 
+---
+
 Harald Revery official website, made with Tailwind CSS, Alpine.js and GLightbox.
 
 * Tailwind CSS: [Website](https://tailwindcss.com/), [Github](https://github.com/tailwindlabs/tailwindcss)

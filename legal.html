@@ -11,8 +11,10 @@
       content="default-src 'self'; 
                script-src 'self' 'unsafe-inline' 'unsafe-eval'; 
                style-src 'self' 'unsafe-inline'; 
-               font-src 'self' data: http://127.0.0.1:* http://localhost:*;
-               media-src 'self' data:;">
+               font-src 'self' data:;
+               media-src 'self' data:;
+               img-src 'self' data: https:;
+               connect-src 'self';">
 
 </head>
 
@@ -405,6 +407,7 @@
 </footer>
 
 </body>
+
 
 
 

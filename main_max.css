@@ -1698,7 +1698,7 @@
     }
   }
   body {
-    font-family: var(--font-brand);
+    font-family: var(--font-brand) !important;
     font-size: var(--text-body-mobile);
     line-height: 1.58;
     letter-spacing: 0.025em;

@@ -3,45 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css"> 
     <title>Harald Revery - Official Website</title>
     <meta name="description" content="Harald Revery | From the Scandinavian forest and mountains onto the EDM stage. Explore the world of electronic music, festival, melodic house, and techno.">
     <meta name="keywords" content="harald, revery, edm, dj, electronic music, festival house, techno, mainstage, producer, music artist">
 
-        <!-- MINIMAL Critical CSS - Only structure, NO colors/fonts that override main.css -->
-    <style>
-        /* Absolute minimum - just prevent layout shift */
-        *,::before,::after{box-sizing:border-box}
-        body{margin:0}
-        
-        /* ONLY structural navbar styles - main.css will handle colors/fonts */
-        .navi_mechanic{
-            position:fixed;
-            top:0;
-            left:0;
-            right:0;
-            z-index:200;
-            backdrop-filter:blur(16px);
-            -webkit-backdrop-filter:blur(16px);
-        }
-        
-        /* Prevent FOUC - hide navbar until CSS loads */
-        @supports not (animation-timeline: scroll()){
-            .navi_mechanic.js-animated-nav{
-                transform:translateY(-110%);
-                opacity:0;
-                transition:transform 0.3s cubic-bezier(0.23,1,0.32,1),opacity 0.3s ease;
-            }
-        }
-    </style>
-    
-    <!-- Load main.css asynchronously with fallback -->
-    <link rel="preload" href="main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="main.css"></noscript>
-
     <!-- Preload LCP image (page load optimization) -->
     <link rel="preload" as="image" href="/photos/bgtexture.jpg" fetchpriority="high">
-    <link rel="preload" href="/fonts/HaraldReveryTextFont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/HaraldReveryMonoFont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HaraldReveryTextFont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/HaraldReveryMonoFont.woff2" as="font" type="font/woff2" crossorigin>
 
     <!--  Open Graph (social media image thing) -->
     <meta property="og:title" content="Harald Revery - Official Website" />
@@ -54,10 +24,10 @@
      <!-- test CSP -->
     <meta http-equiv="Content-Security-Policy" 
       content="default-src 'self'; 
-               script-src 'self' 'unsafe-inline' 'unsafe-eval'; 
                style-src 'self' 'unsafe-inline'; 
-               font-src 'self' data:;
-               media-src 'self' data:;">
+               font-src 'self' data:; 
+               img-src 'self' data:; 
+               script-src 'self' 'unsafe-inline';">
 
     <!-- Internet icon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
@@ -210,7 +180,7 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Clouds and Roads | ISRC: QZHN32004027"
          data-gallery="music-gallery">
-        <img src="./artcover/cloudsandroads11_min.webp" 
+        <img src="./artcover/cloudsandroads11_min.jpg" 
              alt="Clouds and Roads cover art | ISRC: QZHN32004027" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
@@ -220,7 +190,7 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Spiritless | ISRC: QZANL1736598"
          data-gallery="music-gallery">
-        <img src="./artcover/spiritless11_min.webp" 
+        <img src="./artcover/spiritless11_min.jpg" 
              alt="Spiritless cover art | ISRC: QZANL1736598" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
@@ -230,7 +200,7 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Phrases | ISRC: QZWFL2416355"
          data-gallery="music-gallery">
-        <img src="./artcover/phrases11_min.webp" 
+        <img src="./artcover/phrases11_min.jpg" 
              alt="Phrases cover art | ISRC: QZWFL2416355" 
              class="object-cover w-full h-full rounded filter  group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
@@ -240,18 +210,8 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Hollow | ISRC: QZAPG1891917"
          data-gallery="music-gallery">
-        <img src="./artcover/hollow11_min.webp" 
+        <img src="./artcover/hollow11_min.jpg" 
              alt="Hollow cover art | ISRC: QZAPG1891917" 
-             class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
-             loading="lazy">
-      </a>
-
-      <a href="./artcover/uninhabitedisland11.jpg"
-         class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
-         data-title="Uninhabited Island | ISRC: QZTB52410896"
-         data-gallery="music-gallery">
-        <img src="./artcover/uninhabitedisland11_min.webp" 
-             alt="Uninhabited Island cover art | ISRC: QZTB52410896" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
       </a>
@@ -260,18 +220,28 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Looking for Snow | ISRC: QZTBB2487093"
          data-gallery="music-gallery">
-        <img src="./artcover/lookingforsnow11_min.webp" 
+        <img src="./artcover/lookingforsnow11_min.jpg" 
              alt="Looking for Snow cover art | ISRC: QZTBB2487093" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
       </a>
-
+      
+      
+      <a href="./artcover/uninhabitedisland11.jpg"
+         class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
+         data-title="Uninhabited Island | ISRC: QZTB52410896"
+         data-gallery="music-gallery">
+        <img src="./artcover/uninhabitedisland11_min.jpg" 
+             alt="Uninhabited Island cover art | ISRC: QZTB52410896" 
+             class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
+             loading="lazy">
+      </a>
 
       <a href="./artcover/forestrain11.jpg"
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Forest Rain | ISRC: QZES81920321"
          data-gallery="music-gallery">
-        <img src="./artcover/forestrain11_min.webp" 
+        <img src="./artcover/forestrain11_min.jpg" 
              alt="Forest Rain cover art | ISRC: QZES81920321" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
@@ -281,7 +251,7 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Isolated | ISRC: QZ4JJ1822081"
          data-gallery="music-gallery">
-        <img src="./artcover/isolated11_min.webp" 
+        <img src="./artcover/isolated11_min.jpg" 
              alt="Isolated cover art | ISRC: QZ4JJ1822081" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
@@ -293,7 +263,7 @@
          class="glightbox group rounded aspect-square bg-neutral-100 dark:bg-neutral-800 grid-item-reveal transition-all duration-500 hover:scale-105 hover:z-20 shadow-lg overflow-hidden cursor-pointer"
          data-title="Mystery Card | ISRC: QZ9JZ1740891"
          data-gallery="music-gallery">
-        <img src="./artcover/mysterycard11_min.webp" 
+        <img src="./artcover/mysterycard11_min.jpg" 
              alt="Mystery Card cover art | ISRC: QZ9JZ1740891" 
              class="object-cover w-full h-full rounded filter group-hover:saturate-100 transition duration-1000 ease-out" 
              loading="lazy">
@@ -375,7 +345,7 @@
                     style="--delay: 0.1s"
                     data-gallery="photos">
                     <div class="overlay"></div>
-                    <img src="./photos/audioplayer_texture3_min.webp" alt="Harald Revery logo behind mountain Matterhorn" class="w-full h-full object-cover">
+                    <img src="./photos/audioplayer_texture3_min.jpg" alt="Harald Revery logo behind mountain Matterhorn" class="w-full h-full object-cover">
                   </a>
 
                 </div>
@@ -527,7 +497,7 @@
 
 
 <!-- Navigation bar reveal when scrolling down (for firefox and iOS < 15.4)) -->
-<script src="./javascript/navbar_scroll_min.js" defer></script>
+<script src="./javascript/navbar_scroll_min.js"></script>
 
 
 
@@ -543,7 +513,7 @@
 
 
 
-<!-- Alpine.js load -->
+<!-- Alpine.js, NOTE: If stuff looks odd when JS is disabled, it's the Alpine.js fault -->
 <script src="./javascript/alpine.min.js" defer></script>
 
 <!-- Schema SEO -->
@@ -577,6 +547,4 @@
 }
 </script>
 
-
 </html>
-

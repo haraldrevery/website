@@ -2236,7 +2236,7 @@ iframe.wait-autoplay {
 
 /* When checkbox is checked, expand the answer */
 .faq-toggle:checked ~ .faq-question + .faq-answer {
-  max-height: 500px; /* Adjust based on your longest answer */
+  max-height: 1200px; /* Adjust based on your longest answer */
 }
 
 /* Rotate the icon when expanded */

@@ -4,11 +4,4 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /*.pdf$
 
-# Block common AI crawlers specifically using standard syntax
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
 Sitemap: https://haraldrevery.com/sitemap.xml

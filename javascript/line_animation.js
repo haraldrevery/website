@@ -161,14 +161,14 @@ window.restartPlexus = function() {
     const ctx = canvas.getContext('2d');
     const width = 1000, height = 1100;
     
-    const trailCount = window.innerWidth < 768 ? 100 : 470;
+    const trailCount = window.innerWidth < 768 ? 100 : 496;
     const trails = [];
     const startTime = Date.now();
     const initiationDuration = 3600; 
 
     // Custom length configuration for SVG (logo) lines
     const svgLengthConfig = {
-        long: { min: 1400, max: 1996, probability: 0.10 },
+        long: { min: 1400, max: 2196, probability: 0.10 },
         medium: { min: 500, max: 960, probability: 0.25 },
         short: { min: 170, max: 270 }
     };

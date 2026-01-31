@@ -2379,6 +2379,34 @@ iframe.wait-autoplay {
 
 
 
+/* ============================================
+   MOBILE PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+
+/* Disable audio player blob animations on mobile */
+@media (max-width: 768px) {
+  .ambient-blob {
+    display: none;; /* Heavy GPU load on mobile */
+  }
+  
+  .playing .blob-1,
+  .playing .blob-2 {
+    animation: none;
+  }
+  
+  /* Reduce backdrop blur on mobile for better performance */
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px) !important;
+  }
+  
+  .backdrop-blur-3xl {
+    backdrop-filter: blur(10px) !important;
+  }
+}
+
+
+
+
 
 
 

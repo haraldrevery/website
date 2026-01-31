@@ -3468,6 +3468,20 @@ iframe.wait-autoplay {
   opacity: 0;
   animation: crossfade 48s infinite linear;
 }
+@media (max-width: 768px) {
+  .ambient-blob {
+    display: none;
+  }
+  .playing .blob-1, .playing .blob-2 {
+    animation: none;
+  }
+  .backdrop-blur-xl {
+    backdrop-filter: blur(8px) !important;
+  }
+  .backdrop-blur-3xl {
+    backdrop-filter: blur(10px) !important;
+  }
+}
 @supports not (selector(:has(*))) {
   body.menu-open {
     overflow: hidden;
